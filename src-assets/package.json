@@ -17,6 +17,7 @@
   },
   "homepage": "http://junaid.ninja/",
   "devDependencies": {
+    "gulp": "^3.8.11",
     "gulp-concat": "^2.4.3",
     "gulp-minify-css": "^0.4.3",
     "gulp-notify": "^2.2.0",
