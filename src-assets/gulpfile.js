@@ -1,11 +1,11 @@
-var gulp 		= require('gulp');
-var uglify 		= require('gulp-uglify');
-var concat 		= require('gulp-concat');
-var striplog 	= require('gulp-strip-debug');
-var minifycss 	= require('gulp-minify-css');
-var gutil 		= require('gulp-util');
-var sass 		= require('gulp-sass');
-var notify 		= require("gulp-notify");
+var gulp 		   = require('gulp');
+var uglify 		 = require('gulp-uglify');
+var concat 		 = require('gulp-concat');
+var striplog 	 = require('gulp-strip-debug');
+var minifycss  = require('gulp-minify-css');
+var gutil 		 = require('gulp-util');
+var sass 		   = require('gulp-sass');
+var notify 		 = require("gulp-notify");
 
 //js files
 gulp.task('scripts', function() {
