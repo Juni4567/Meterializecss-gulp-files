@@ -4,6 +4,4 @@ All you need is goto src-assets folder, run command prompt and enter the followi
 
 `npm install`
 
-`npm install gulp`
-
 `gulp`
