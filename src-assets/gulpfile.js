@@ -1,13 +1,11 @@
 var gulp 		= require('gulp');
 var uglify 		= require('gulp-uglify');
-var clean 		= require('gulp-clean');
 var concat 		= require('gulp-concat');
 var striplog 	= require('gulp-strip-debug');
 var minifycss 	= require('gulp-minify-css');
 var gutil 		= require('gulp-util');
 var sass 		= require('gulp-sass');
 var notify 		= require("gulp-notify");
-var connect 	= require('gulp-connect');
 
 //js files
 gulp.task('scripts', function() {
@@ -30,20 +28,6 @@ gulp.task('css', function() {
       .pipe(gulp.dest('../assets/'))                      // Set the destination to assets/css
 });
 
-// // Clean all builds
-// gulp.task('clean', function() {
-//   return gulp.src(['assets/build/'], {read: false})
-//     .pipe(clean());
-// });
-
-// web server
-gulp.task('webserver', function() {
-  connect.server();
-});
-
-// Default task - clean the build dir
-// Then rebuild the js and css files
-
 gulp.task('watch', function(){
   gulp.watch(['scss/*.scss'], ['css']); // Watch and run sass on changes
   gulp.watch('js/*.js', ['scripts']); // Watch and run javascripts on changes
@@ -51,4 +35,4 @@ gulp.task('watch', function(){
     .pipe(notify('An asset has changed'));
 });
 
-gulp.task('default', ['webserver', 'css', 'scripts', 'watch']);
+gulp.task('default', ['css', 'scripts', 'watch']);
