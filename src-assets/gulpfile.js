@@ -50,7 +50,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('css', function() {  
-  return gulp.src(['scss/*.scss']) 
+  return gulp.src(['scss/**/*.scss']) 
       .pipe(sass({style: 'compressed', errLogToConsole: true}))  // Compile sass
       .pipe(concat('styles.min.css'))                               // Concat all css
       .pipe(minifycss())                                         // Minify the CSS
