@@ -645,7 +645,6 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
       color: $input-disabled-color;
     }
   }
-
   & + label {
     position: absolute;
     top: -14px;
@@ -672,28 +671,9 @@ select:disabled {
 .select-wrapper i {
   color: rgba(0,0,0,.3);
 }
-.select-dropdown li.disabled,
-.select-dropdown li.disabled > span,
-.select-dropdown li.optgroup, {
+.select-dropdown li.disabled {
   color: rgba(0,0,0,.3);
   background-color: transparent;
-}
-
-// Optgroup styles
-.select-dropdown li.optgroup {
-  border-top: 1px solid $dropdown-hover-bg-color;
-
-  &.selected > span {
-    color: rgba(0,0,0, .7);
-  }
-
-  & > span {
-    color: rgba(0,0,0, .4);
-  }
-
-  & ~ li:not(.optgroup) {
-    padding-left: 1rem;
-  }
 }
 
 

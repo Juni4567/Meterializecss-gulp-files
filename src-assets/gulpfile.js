@@ -12,7 +12,36 @@ gulp.task('scripts', function() {
   var js_src = 'js/*.js';
   var js_dest = '../assets/';
   // pipe the js through concat, console log stripping, uglification and then store
-  return gulp.src(js_src)
+  return gulp.src([
+              "js/jquery.easing.1.3.js",
+              "js/animation.js",
+              "js/velocity.min.js",
+              "js/hammer.min.js",
+              "js/jquery.hammer.js",
+              "js/global.js",
+              "js/collapsible.js",
+              "js/dropdown.js",
+              "js/leanModal.js",
+              "js/materialbox.js",
+              "js/parallax.js",
+              "js/tabs.js",
+              "js/tooltip.js",
+              "js/waves.js",
+              "js/toasts.js",
+              "js/sideNav.js",
+              "js/scrollspy.js",
+              "js/forms.js",
+              "js/slider.js",
+              "js/cards.js",
+              "js/chips.js",
+              "js/pushpin.js",
+              "js/buttons.js",
+              "js/transitions.js",
+              "js/scrollFire.js",
+              "js/date_picker/picker.js",
+              "js/date_picker/picker.date.js",
+              "js/character_counter.js",
+             ])
       .pipe(concat('scripts.min.js')) // concat all files in the src
       .pipe(striplog())
       .pipe(uglify())   // uglify them all
@@ -21,7 +50,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('css', function() {  
-  return gulp.src(['scss/*.scss']) 
+  return gulp.src(['scss/**/*.scss']) 
       .pipe(sass({style: 'compressed', errLogToConsole: true}))  // Compile sass
       .pipe(concat('styles.min.css'))                               // Concat all css
       .pipe(minifycss())                                         // Minify the CSS
